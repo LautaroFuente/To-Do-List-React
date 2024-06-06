@@ -6,4 +6,6 @@ const middlewares = jsonServer.defaults();
 server.use(middlewares);
 server.use(router);
 
-export default server;
+server.listen(3001, () => {
+  console.log("JSON Server is running on http://localhost:3001");
+});
