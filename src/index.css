@@ -1,0 +1,244 @@
+/***** Reset Styles *****/
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  scroll-behavior: smooth;
+  font-family: "Poetsen One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+}
+
+/* Styles */
+
+.bg-hero-image {
+  background-image: url(/img/bg-photo.webp);
+  background-color: rgba(240, 240, 240, var(--bg-image-opacity, 1));
+  background-blend-mode: overlay;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.complete {
+  order: 10;
+}
+
+.container-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ddcbaa7d;
+}
+
+.container-tasks {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.edit {
+  animation: changeAnimation 0.8s ease 0s 3 normal forwards;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 3rem;
+  background-color: #ddcbaab8;
+  padding: 1rem 0;
+  margin-top: 0;
+}
+
+h3 {
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  border-bottom: solid 2px #cda255;
+}
+
+input,
+button {
+  background-color: #ffffff;
+  border: solid 2px #83643f;
+  font-family: "Poetsen One", sans-serif;
+  font-weight: 400;
+}
+
+input:hover,
+button:hover {
+  cursor: pointer;
+  background-color: #fdf6f0;
+}
+
+input,
+label {
+  margin: 1rem 0.3rem;
+}
+
+.task {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  border: solid 2px #83643f;
+  border-radius: 2px;
+  margin-bottom: 2rem;
+}
+
+.task b,
+.task button {
+  margin: 1rem;
+}
+
+/* Keyframes*/
+
+@keyframes changeAnimation {
+  0% {
+    animation-timing-function: ease-out;
+    transform: scale(1);
+    transform-origin: center center;
+  }
+
+  10% {
+    animation-timing-function: ease-in;
+    transform: scale(0.91);
+  }
+
+  17% {
+    animation-timing-function: ease-out;
+    transform: scale(0.98);
+  }
+
+  33% {
+    animation-timing-function: ease-in;
+    transform: scale(0.87);
+  }
+
+  45% {
+    animation-timing-function: ease-out;
+    transform: scale(1);
+  }
+}
+
+@keyframes completeAnimation {
+  0% {
+    animation-timing-function: ease-in;
+    opacity: 0;
+    transform: translateY(-250px);
+  }
+
+  38% {
+    animation-timing-function: ease-out;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  55% {
+    animation-timing-function: ease-in;
+    transform: translateY(-65px);
+  }
+
+  72% {
+    animation-timing-function: ease-out;
+    transform: translateY(0);
+  }
+
+  81% {
+    animation-timing-function: ease-in;
+    transform: translateY(-28px);
+  }
+
+  90% {
+    animation-timing-function: ease-out;
+    transform: translateY(0);
+  }
+
+  95% {
+    animation-timing-function: ease-in;
+    transform: translateY(-8px);
+  }
+
+  100% {
+    animation-timing-function: ease-out;
+    transform: translateY(0);
+  }
+}
+
+@keyframes uncompleteAnimation {
+  0% {
+    animation-timing-function: ease-in;
+    opacity: 0;
+    transform: translateY(250px);
+  }
+
+  38% {
+    animation-timing-function: ease-out;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  55% {
+    animation-timing-function: ease-in;
+    transform: translateY(65px);
+  }
+
+  72% {
+    animation-timing-function: ease-out;
+    transform: translateY(0);
+  }
+
+  81% {
+    animation-timing-function: ease-in;
+    transform: translateY(28px);
+  }
+
+  90% {
+    animation-timing-function: ease-out;
+    transform: translateY(0);
+  }
+
+  95% {
+    animation-timing-function: ease-in;
+    transform: translateY(8px);
+  }
+
+  100% {
+    animation-timing-function: ease-out;
+    transform: translateY(0);
+  }
+}
+
+/* Media */
+
+@media screen and (max-width: 700px) {
+  html {
+    font-size: 0.8rem;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .task {
+    flex-direction: column;
+  }
+}
